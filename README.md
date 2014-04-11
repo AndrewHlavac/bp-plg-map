@@ -1,4 +1,2 @@
-joo-plg-map
-===========
+#Joomla! Google Maps plugin
 
-Google Maps plugin for Joomla!
