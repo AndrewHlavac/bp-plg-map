@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="2.5" type="plugin"  group="content" method="upgrade">
+	<name>BluePro Google Maps Plugin</name>
+	<creationDate>2013-07-26</creationDate>
+	<author>Ondřej Hlaváč (BluePro)</author>
+	<authorEmail>info@bluepro.cz</authorEmail>
+	<authorUrl>http://www.bluepro.cz</authorUrl>
+	<copyright>Ondřej Hlaváč 2013</copyright>
+	<license>GNU/GPL</license>
+	<version>1.0</version>
+	<description>Google Maps</description>
+	<files>
+		<filename plugin="bpmap">bpmap.php</filename>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/plugins/content">
+			<fieldset name="basic">
+				<field name="api_key" type="text" default="" label="API key" description="Google API key" />
+	
+				<field name="latitude" type="text" default="" label="Latitude" />
+				<field name="longitude" type="text" default="" label="Longtitude" />
+				<field name="zoom" type="text" default="14" size="3" label="Zoom" />
+
+				<field name="type" type="list" default="G_NORMAL_MAP"label="Map type">
+					<option value="G_NORMAL_MAP">Normal</option>
+					<option value="G_SATELLITE_MAP">Satelite</option>
+					<option value="G_HYBRID_MAP">Hybrid</option>
+				</field>
+				<field name="type_control" type="radio" default="0" label="Map type control" description="Shows map type controllers.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="controll" type="list" default="small" label="Controller" description="Displays controll elements.">
+					<option value="none">None</option>
+					<option value="small">Small</option>
+					<option value="large">Large</option>
+				</field>
+				<field name="marker" type="radio" default="0" label="Show Marker">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="draging" type="radio" default="1" label="Draging the map" description="Enable draging the map.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="mousewheel" type="radio" default="0" label="Zooming by the mousewheel" description="Enable zooming by the mousewheel.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="width" type="text" default="" label="Width" description="Map width" />
+				<field name="height" type="text" default="300px" label="Height" description="Map height" />
+		</fieldset>		
+	  </fields>
+	</config>		
+</install>
